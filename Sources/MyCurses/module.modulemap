@@ -1,5 +1,5 @@
 module MyCurses [system] {
-    header "mycurses.h"
+    header "ncurses.h"
     link "ncurses"
     export *
 }
