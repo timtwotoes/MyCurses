@@ -1,5 +1,46 @@
 module MyCurses [system] {
-    header "ncurses.h"
+    header "curses.h"
+    
+    explicit module dll {
+        header "ncurses_dll.h"
+        export *
+    }
+    
+    explicit module eti {
+        header "eti.h"
+        export *
+    }
+    
+    explicit module nc_tparm {
+        header "nc_tparm.h"
+        export *
+    }
+    
+    exclude header "term.h"
+    exclude header "term_entry.h"
+    exclude header "termcap.h"
+    exclude header "tic.h"
+    textual header "unctrl.h"
+    
     link "ncurses"
+    
+    explicit module form {
+        header "form.h"
+        link "form"
+        export *
+    }
+    
+    explicit module menu {
+        header "menu.h"
+        link "menu"
+        export *
+    }
+    
+    explicit module panel {
+        header "panel.h"
+        link "panel"
+        export *
+    }
+    
     export *
 }
