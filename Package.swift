@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "MyCurses",
+    platforms: [.macOS(.v15)],
     products: [
         .library(
             name: "MyCurses",
